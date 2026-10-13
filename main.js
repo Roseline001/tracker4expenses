@@ -1,4 +1,12 @@
 import { CURRENCIES, CATEGORIES } from "./data.js";
+import {
+  getState,
+  addExpense,
+  deleteExpense,
+  updateExpenseCategory,
+  setHomeCurrency,
+  setCategoryFilter,
+} from "./state.js";
 
 const form = document.querySelector("#expense-form");
 const descriptionInput = document.querySelector("#description");
