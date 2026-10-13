@@ -44,3 +44,192 @@ h2 {
   opacity: 0.9;
 }
 
+.container {
+  max-width: 760px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+}
+
+.expense-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input,
+select {
+  font: inherit;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #fff;
+}
+
+input:focus,
+select:focus {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
+.form-error {
+  color: var(--danger);
+  margin: 0.5rem 0 0;
+  min-height: 1.2em;
+}
+
+.btn {
+  font: inherit;
+  border: none;
+  border-radius: 6px;
+  padding: 0.55rem 1rem;
+  cursor: pointer;
+}
+
+.btn-primary {
+  grid-column: 1 / -1;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+}
+
+.btn-delete {
+  background: transparent;
+  color: var(--danger);
+  border: 1px solid var(--danger);
+  padding: 0.3rem 0.7rem;
+  font-size: 0.85rem;
+}
+
+.btn-delete:hover {
+  background: var(--danger);
+  color: #fff;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.2fr;
+  gap: 1rem;
+  align-items: end;
+}
+
+.total {
+  text-align: right;
+}
+
+.total-label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.total-amount {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.expense-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.expense-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.expense-item:last-child {
+  border-bottom: none;
+}
+
+.expense-description {
+  font-weight: 600;
+}
+
+.expense-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.expense-meta select {
+  padding: 0.15rem 0.3rem;
+  font-size: 0.85rem;
+}
+
+.expense-amounts {
+  text-align: right;
+}
+
+.converted {
+  font-weight: 700;
+}
+
+.original {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.empty-message {
+  color: var(--muted);
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .expense-form,
+  .controls {
+    grid-template-columns: 1fr;
+  }
+
+  .total {
+    text-align: left;
+  }
+
+  .expense-item {
+    grid-template-columns: 1fr auto;
+  }
+
+  .btn-delete {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
