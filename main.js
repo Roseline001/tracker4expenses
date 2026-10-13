@@ -8,3 +8,9 @@ const categorySelect = document.querySelector("#category");
 const homeCurrencySelect = document.querySelector("#home-currency");
 const categoryFilterSelect = document.querySelector("#category-filter");
 const expenseList = document.querySelector("#expense-list");
+
+
+fillSelect(currencySelect, CURRENCIES, "USD");
+fillSelect(categorySelect, CATEGORIES, CATEGORIES[0]);
+fillSelect(homeCurrencySelect, CURRENCIES, getState().homeCurrency);
+fillSelect(categoryFilterSelect, ["All", ...CATEGORIES], "All");
