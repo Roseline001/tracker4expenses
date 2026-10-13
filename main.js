@@ -7,6 +7,7 @@ import {
   setHomeCurrency,
   setCategoryFilter,
 } from "./state.js";
+import { fillSelect, render, showFormError, clearFormError } from "./ui.js";
 
 const form = document.querySelector("#expense-form");
 const descriptionInput = document.querySelector("#description");
